@@ -3,6 +3,7 @@ from django.contrib import admin
 from django.urls import path
 
 from audit.views import audit_logs
+from django.http import JsonResponse
 
 from ingestion.views import SAPUploadView
 
@@ -18,9 +19,25 @@ from ingestion.views import (
     TravelUploadView
 )
 
+def home(request):
+    return JsonResponse({
+        "status": "success",
+        "message": "Breathe ESG Backend API Running",
+        "frontend": "https://breath-esg-sigma.vercel.app",
+        "endpoints": [
+            "/api/review/",
+            "/api/audit-logs/",
+            "/api/upload/sap/",
+            "/api/upload/utility/",
+            "/api/upload/travel/"
+        ]
+    })
+
 
 
 urlpatterns = [
+
+    path('', home),
 
     path(
         'admin/',

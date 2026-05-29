@@ -26,7 +26,7 @@ function RecordModal({
     try {
 
       await axios.post(
-        `http://127.0.0.1:8000/api/review/${selectedRecord.id}/note/`,
+        `https://breath-esg-backend.onrender.com/${selectedRecord.id}/note/`,
         {
           note
         }

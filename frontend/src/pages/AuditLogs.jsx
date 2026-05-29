@@ -22,7 +22,7 @@ function AuditLogs({ darkMode }) {
     try {
 
       const response = await axios.get(
-        'http://127.0.0.1:8000/api/audit-logs/'
+        'http://breath-esg-backend.onrender.com/api/audit-logs/'
       )
 
       setLogs(response.data)

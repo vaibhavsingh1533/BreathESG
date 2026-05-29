@@ -49,7 +49,7 @@ const fetchRecords = async () => {
     setLoading(true)
 
     const response = await axios.get(
-      'http://127.0.0.1:8000/api/review/'
+      'https://breath-esg-backend.onrender.com/api/review/'
     )
 
     setRecords(response.data)
@@ -69,9 +69,9 @@ const fetchRecords = async () => {
 
     try {
 
-      await axios.post(
-        `http://127.0.0.1:8000/api/review/${id}/approve/`
-      )
+        await axios.post(
+    `https://breath-esg-backend.onrender.com/api/review/${id}/approve/`
+  )
 
       fetchRecords()
       toast.success('Record approved')

@@ -67,12 +67,12 @@ const [activeSource, setActiveSource] = useState('SAP')
 const endpoint =
 
   activeSource === 'SAP'
-    ? 'http://127.0.0.1:8000/api/upload/sap/'
+    ? 'https://breath-esg-backend.onrender.com/api/upload/sap/'
 
     : activeSource === 'UTILITY'
-      ? 'http://127.0.0.1:8000/api/upload/utility/'
+      ? 'https://breath-esg-backend.onrender.com/api/upload/utility/'
 
-      : 'http://127.0.0.1:8000/api/upload/travel/'
+      : 'https://breath-esg-backend.onrender.com/api/upload/travel/'
 
 
 const response = await axios.post(

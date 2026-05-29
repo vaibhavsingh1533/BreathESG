@@ -52,6 +52,7 @@ function App() {
   element={
     <AuditLogs
       darkMode={darkMode}
+      setDarkMode={setDarkMode}
     />
   }
 />
